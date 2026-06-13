@@ -1,0 +1,128 @@
+/* Load fonts via standard Google Fonts CDN — avoids next/font Windows ESM path bug */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Font variables referenced by tailwind.config.ts */
+    --font-inter: 'Inter', sans-serif;
+    --font-playfair: 'Playfair Display', serif;
+
+    --background: 250 248 245;
+    --foreground: 10 22 40;
+    --card: 255 255 255;
+    --border: 229 224 216;
+    --muted: 107 114 128;
+    --accent: 201 168 76;
+  }
+
+  .dark {
+    --background: 10 22 40;
+    --foreground: 245 240 232;
+    --card: 15 30 56;
+    --border: 28 46 74;
+    --muted: 148 163 184;
+    --accent: 201 168 76;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-navy font-sans antialiased dark:bg-navy dark:text-cream;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  * {
+    @apply border-cream-300 dark:border-navy-600;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gold-text {
+    @apply text-gold-500;
+  }
+
+  .gold-border {
+    @apply border-gold-500;
+  }
+
+  .card-base {
+    @apply bg-white dark:bg-navy-800 rounded-2xl shadow-card hover:shadow-card-hover transition-shadow duration-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gold-500 hover:bg-gold-600 text-navy font-semibold rounded-xl transition-all duration-200 shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy font-semibold rounded-xl transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 active:translate-y-0;
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-navy hover:bg-navy-800 dark:bg-navy-700 dark:hover:bg-navy-600 text-cream font-semibold rounded-xl transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 active:translate-y-0;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-3 rounded-xl border border-cream-300 dark:border-navy-600 bg-white dark:bg-navy-800 text-navy dark:text-cream placeholder-gray-400 dark:placeholder-navy-300 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .label-base {
+    @apply block text-sm font-medium text-navy-600 dark:text-cream-300 mb-1.5;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy dark:text-cream leading-tight;
+  }
+
+  .section-sub {
+    @apply text-lg text-gray-600 dark:text-navy-100 mt-4 max-w-2xl;
+  }
+
+  .gold-divider {
+    @apply h-1 w-16 bg-gold-gradient rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Custom range slider styling */
+input[type='range'] {
+  @apply appearance-none h-2 bg-cream-300 dark:bg-navy-600 rounded-full outline-none cursor-pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  @apply appearance-none w-5 h-5 bg-gold-500 rounded-full cursor-pointer shadow-gold;
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-5 h-5 bg-gold-500 rounded-full cursor-pointer border-0 shadow-gold;
+}

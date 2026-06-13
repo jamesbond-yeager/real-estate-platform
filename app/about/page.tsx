@@ -1,0 +1,189 @@
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { CheckCircle2, Award, Users, Building2, Star, Phone, Mail } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'About Arjun Sharma — Real Estate Consultant',
+  description: 'Meet Arjun Sharma — Bangalore\'s trusted real estate consultant with 12+ years of experience, 500+ properties sold, and a client-first approach.',
+}
+
+const credentials = [
+  'RERA Registered Agent — Karnataka',
+  'Certified Real Estate Professional (CREP)',
+  'Member — National Association of Realtors India',
+  'Bangalore Real Estate Association — Senior Member',
+  '12+ Years Exclusive Bangalore Market Experience',
+]
+
+const achievements = [
+  { icon: Building2, value: '500+', label: 'Properties Sold' },
+  { icon: Users, value: '350+', label: 'Happy Clients' },
+  { icon: Award, value: '8', label: 'Industry Awards' },
+  { icon: Star, value: '4.9', label: 'Average Rating' },
+]
+
+const services = [
+  {
+    title: 'Residential Sales & Purchases',
+    desc: 'End-to-end guidance for buying or selling apartments, villas, and independent homes in Bangalore.',
+  },
+  {
+    title: 'Commercial Property',
+    desc: 'Office spaces, retail showrooms, warehouses, and commercial plots — bought, sold, and leased.',
+  },
+  {
+    title: 'Luxury & Premium Segment',
+    desc: 'Ultra-premium villas, penthouses, and heritage properties handled with discretion.',
+  },
+  {
+    title: 'Land & Development',
+    desc: 'Residential plots, farm land, and development sites with clear title verification.',
+  },
+  {
+    title: 'Resort & Hospitality Properties',
+    desc: 'Boutique resorts, homestays, and hospitality assets — purchase, lease, or invest.',
+  },
+  {
+    title: 'Rental & Lease Management',
+    desc: 'Tenant screening, lease drafting, and rental yield maximisation for landlords.',
+  },
+]
+
+export default function AboutPage() {
+  return (
+    <div className="pt-20 lg:pt-24">
+      {/* Hero section */}
+      <section className="section-padding bg-navy dark:bg-navy-950 py-16">
+        <div className="container-max grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block px-4 py-1 rounded-full border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-widest uppercase mb-4">
+              Your Trusted Advisor
+            </span>
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+              Arjun Sharma
+            </h1>
+            <p className="text-gold-400 text-lg mb-6 font-medium">Senior Real Estate Consultant, Bangalore</p>
+            <p className="text-navy-200 leading-relaxed mb-8">
+              For over twelve years, I have been the trusted real estate guide for hundreds of families, investors,
+              and businesses across Bangalore. My philosophy is simple: your interests come first, always.
+              Whether you&apos;re a first-time buyer or a seasoned investor, I bring the same level of dedication,
+              transparency, and market expertise to every engagement.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/contact" className="btn-primary text-sm">
+                Book a Free Consultation
+              </Link>
+              <a href="tel:+919876543210" className="btn-secondary text-sm">
+                <Phone className="w-4 h-4" /> Call Now
+              </a>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="rounded-3xl overflow-hidden aspect-[4/5] max-w-sm mx-auto">
+              <Image
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=85"
+                alt="Arjun Sharma — Real Estate Consultant"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 80vw, 40vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="section-padding bg-white dark:bg-navy-900 py-12">
+        <div className="container-max grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {achievements.map(a => (
+            <div key={a.label} className="card-base p-6 text-center">
+              <div className="w-12 h-12 rounded-2xl bg-gold-500/10 flex items-center justify-center mx-auto mb-3">
+                <a.icon className="w-6 h-6 text-gold-500" />
+              </div>
+              <p className="font-serif text-3xl font-bold text-navy dark:text-cream mb-1">{a.value}</p>
+              <p className="text-sm text-gray-500 dark:text-navy-200">{a.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Credentials */}
+      <section className="section-padding bg-cream-50 dark:bg-navy-950">
+        <div className="container-max grid lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="section-heading mb-4">Credentials &<br /><span className="text-gold-500 italic">Qualifications</span></h2>
+            <div className="gold-divider mb-6" />
+            <ul className="space-y-3">
+              {credentials.map(c => (
+                <li key={c} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
+                  <span className="text-gray-700 dark:text-navy-100 text-sm">{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="section-heading mb-4">My<br /><span className="text-gold-500 italic">Philosophy</span></h2>
+            <div className="gold-divider mb-6" />
+            <div className="space-y-4 text-gray-600 dark:text-navy-100 leading-relaxed text-sm">
+              <p>
+                Real estate is not just about properties — it&apos;s about the people who live in them, invest in them,
+                and build their futures through them. I approach every transaction with this understanding.
+              </p>
+              <p>
+                I never push a property that doesn&apos;t genuinely fit your needs. I&apos;ll tell you if a deal looks
+                overpriced. I&apos;ll walk away from a commission if the property doesn&apos;t have a clear title.
+                This is how I&apos;ve built a reputation worth more than any single transaction.
+              </p>
+              <p>
+                My network of trusted legal professionals, home loan advisors, interior designers, and
+                property managers means you have a full ecosystem of support — before, during, and after your purchase.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="section-padding bg-white dark:bg-navy-900">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Services<br /><span className="text-gold-500 italic">I Offer</span></h2>
+            <div className="gold-divider mx-auto mt-5 mb-5" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map(s => (
+              <div key={s.title} className="card-base p-6">
+                <h3 className="font-serif font-semibold text-navy dark:text-cream text-base mb-2">{s.title}</h3>
+                <p className="text-sm text-gray-500 dark:text-navy-200 leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-navy dark:bg-navy-950">
+        <div className="container-max text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+            Ready to Work Together?
+          </h2>
+          <p className="text-navy-200 mb-8 max-w-lg mx-auto">
+            Whether you&apos;re buying your first home or diversifying your investment portfolio, let&apos;s start with a
+            conversation — no obligation, no pressure.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact" className="btn-primary">Book a Free Consultation</Link>
+            <a
+              href="mailto:arjun@prestigeproperties.in"
+              className="btn-secondary flex items-center gap-2"
+            >
+              <Mail className="w-4 h-4" /> Email Me
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
