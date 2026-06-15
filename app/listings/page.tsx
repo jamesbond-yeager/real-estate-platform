@@ -3,8 +3,8 @@ import listingsData from '@/data/listings.json'
 import ListingsContent from '@/components/listings/ListingsContent'
 
 export const metadata = {
-  title: 'All Properties',
-  description: 'Browse our curated portfolio of properties across Bangalore and South India.',
+  title: 'Properties — Buy, Rent & PG in Bangalore',
+  description: 'Browse houses for rent, flats for rent, properties to buy, plots & land, and PG accommodation in Bangalore. Curated listings by SK Properties.',
 }
 
 export default function ListingsPage() {

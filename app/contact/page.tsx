@@ -4,7 +4,7 @@ import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact — Book a Free Consultation',
-  description: 'Get in touch for personalised real estate advice. Chat on WhatsApp or fill the form — I respond within 2 hours.',
+  description: 'Contact SK Properties for personalised real estate advice in Bangalore. Looking to buy property, rent a flat, or find PG accommodation? Chat on WhatsApp or fill the form — I respond within 2 hours.',
 }
 
 const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'

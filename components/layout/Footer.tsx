@@ -26,15 +26,15 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-lg bg-gold-gradient flex items-center justify-center shadow-gold">
-              <span className="text-navy font-serif font-bold text-sm">PP</span>
+              <span className="text-navy font-serif font-bold text-sm">SK</span>
             </div>
             <div>
-              <span className="font-serif font-bold text-lg text-white leading-none">Prestige</span>
+              <span className="font-serif font-bold text-lg text-white leading-none">SK</span>
               <span className="block text-[10px] font-medium text-gold-500 leading-none tracking-widest uppercase">Properties</span>
             </div>
           </div>
           <p className="text-sm leading-relaxed text-navy-200 mb-5">
-            Bangalore's trusted real estate consultant connecting discerning clients with exceptional properties since 2012.
+            SK Properties — Bangalore&apos;s trusted real estate consultant. Houses for rent, flats, land, luxury villas &amp; PG accommodation.
           </p>
           <div className="flex gap-3">
             {[
@@ -114,7 +114,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="container-max section-padding py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-300">
-        <p>© {new Date().getFullYear()} Prestige Properties. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} SK Properties. All rights reserved.</p>
         <div className="flex gap-4">
           <Link href="#" className="hover:text-gold-400 transition-colors">Privacy Policy</Link>
           <Link href="#" className="hover:text-gold-400 transition-colors">Terms of Service</Link>

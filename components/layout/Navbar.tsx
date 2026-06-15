@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-lg bg-gold-gradient flex items-center justify-center shadow-gold">
-              <span className="text-navy font-serif font-bold text-sm">PP</span>
+              <span className="text-navy font-serif font-bold text-sm">SK</span>
             </div>
             <div>
               <span
@@ -52,7 +52,7 @@ export default function Navbar() {
                   scrolled || !isHome ? 'text-navy dark:text-cream' : 'text-white'
                 )}
               >
-                Prestige
+                SK
               </span>
               <span className="block text-[10px] font-medium text-gold-500 leading-none tracking-widest uppercase">
                 Properties

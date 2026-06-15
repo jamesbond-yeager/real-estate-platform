@@ -4,7 +4,7 @@ import { CheckCircle2, Award, Users, Building2, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About — Real Estate Consultant Bangalore',
-  description: 'Trusted real estate consultant with 12+ years of experience, 500+ properties sold, and a client-first approach across Bangalore.',
+  description: 'SK Properties — trusted Bangalore real estate consultant with 12+ years of experience, 500+ properties sold. Helping you buy property, rent flats, or find PG accommodation in Bangalore.',
 }
 
 const credentials = [

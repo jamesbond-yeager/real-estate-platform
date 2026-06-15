@@ -8,26 +8,40 @@ import CallbackWidget from '@/components/forms/CallbackWidget'
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yourdomain.com'),
   title: {
-    default: 'Prestige Properties — Premium Real Estate in Bangalore',
-    template: '%s | Prestige Properties',
+    default: 'SK Properties — Buy, Rent & PG in Bangalore',
+    template: '%s | SK Properties',
   },
   description:
-    'Find your dream home with Bangalore\'s trusted real estate expert. Residential, commercial, luxury villas, land, and PG accommodations. Call today for a free consultation.',
-  keywords: ['real estate bangalore', 'property for sale bangalore', 'luxury villas', 'apartments', 'commercial property', 'land plots', 'PG accommodation'],
-  authors: [{ name: 'Prestige Properties' }],
-  creator: 'Prestige Properties',
+    'Find houses for rent, flats for rent, properties to buy, plots & land, and PG accommodation in Bangalore. SK Properties — trusted real estate consultant with 12+ years of experience.',
+  keywords: [
+    'real estate Bangalore',
+    'houses for rent Bangalore',
+    'flats for rent Bangalore',
+    'property for sale Bangalore',
+    'buy property Bangalore',
+    'PG accommodation Bangalore',
+    'plots and land Bangalore',
+    'luxury villas Bangalore',
+    'apartments Bangalore',
+    'commercial property Bangalore',
+    'SK Properties',
+  ],
+  authors: [{ name: 'SK Properties' }],
+  creator: 'SK Properties',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Prestige Properties',
-    title: 'Prestige Properties — Premium Real Estate in Bangalore',
-    description: 'Find your dream home with Bangalore\'s trusted real estate expert.',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Prestige Properties' }],
+    siteName: 'SK Properties',
+    title: 'SK Properties — Buy, Rent & PG in Bangalore',
+    description:
+      'Find houses for rent, flats for rent, properties to buy, plots & land, and PG accommodation in Bangalore. Trusted real estate consultant with 12+ years of experience.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'SK Properties — Real Estate Bangalore' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Prestige Properties — Premium Real Estate in Bangalore',
-    description: 'Find your dream home with Bangalore\'s trusted real estate expert.',
+    title: 'SK Properties — Buy, Rent & PG in Bangalore',
+    description:
+      'Houses for rent, flats for rent, property for sale, plots & PG accommodation in Bangalore. 12+ years. 500+ properties.',
     images: ['/og-image.jpg'],
   },
   robots: {
