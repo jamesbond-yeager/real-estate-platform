@@ -8,9 +8,10 @@ import EnquiryForm from '@/components/forms/EnquiryForm'
 import EMICalculator from '@/components/ui/EMICalculator'
 import Badge from '@/components/ui/Badge'
 import { categoryLabel, typeLabel, getStatusColor, getStatusLabel } from '@/lib/utils'
+import ShareButton from '@/components/ui/ShareButton'
 import {
   Bed, Bath, Maximize, MapPin, Calendar, Car, Layers, ArrowLeft,
-  CheckCircle2, Share2, Phone
+  CheckCircle2, Phone
 } from 'lucide-react'
 
 const ALL_LISTINGS = listingsData as Listing[]
@@ -126,13 +127,7 @@ export default async function ListingDetailPage({ params }: { params: Promise<{ 
                       </span>
                     </div>
                     <div className="flex gap-2">
-                      <button
-                        onClick={() => navigator.share?.({ title: listing.title, url: window.location.href })}
-                        className="p-2 rounded-lg border border-cream-300 dark:border-navy-600 text-gray-500 dark:text-navy-200 hover:border-gold-500 hover:text-gold-500 transition-colors"
-                        aria-label="Share"
-                      >
-                        <Share2 className="w-4 h-4" />
-                      </button>
+                      <ShareButton title={listing.title} />
                     </div>
                   </div>
 
