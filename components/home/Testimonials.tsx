@@ -10,28 +10,28 @@ const testimonials = [
     role: 'Bought a Villa in Whitefield',
     photo: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=200&q=80',
     rating: 5,
-    text: 'Arjun made the entire process seamless. He understood exactly what we wanted — a home with a garden for our kids and good connectivity to the tech corridor — and found us the perfect villa within 3 weeks. His legal and documentation guidance was invaluable.',
+    text: 'Our consultant made the entire process seamless. He understood exactly what we wanted — a home with a garden for our kids and good connectivity to the tech corridor — and found us the perfect villa within 3 weeks. His legal and documentation guidance was invaluable.',
   },
   {
     name: 'Kiran Rao',
     role: 'Commercial property investor',
     photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
     rating: 5,
-    text: 'I\'ve worked with multiple brokers over the years, but Arjun stands apart. He doesn\'t just show you listings — he brings genuine market insight. I invested in two commercial units on his recommendation and both have yielded exceptional returns.',
+    text: 'I\'ve worked with multiple brokers over the years, but this agent stands apart. He doesn\'t just show you listings — he brings genuine market insight. I invested in two commercial units on his recommendation and both have yielded exceptional returns.',
   },
   {
     name: 'Dr. Ananya Krishnan',
     role: 'Rented a PG near Koramangala',
     photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80',
     rating: 5,
-    text: 'As a medical resident relocating to Bangalore, I had very specific requirements on location and budget. Arjun was incredibly patient and responsive — always available, even on evenings. Found me a wonderful co-living space in just two days.',
+    text: 'As a medical resident relocating to Bangalore, I had very specific requirements on location and budget. My agent was incredibly patient and responsive — always available, even on evenings. Found me a wonderful co-living space in just two days.',
   },
   {
     name: 'The Nair Family',
     role: 'Sold a heritage bungalow in Indiranagar',
     photo: 'https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?w=200&q=80',
     rating: 5,
-    text: 'Selling our ancestral property was emotionally difficult. Arjun handled it with the utmost sensitivity, getting us 12% above our asking price through a well-orchestrated bidding process. We couldn\'t have asked for a better outcome.',
+    text: 'Selling our ancestral property was emotionally difficult. Our agent handled it with the utmost sensitivity, getting us 12% above our asking price through a well-orchestrated bidding process. We couldn\'t have asked for a better outcome.',
   },
 ]
 

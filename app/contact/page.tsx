@@ -1,46 +1,16 @@
 import type { Metadata } from 'next'
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact — Book a Free Consultation',
-  description: 'Reach out to Arjun Sharma for personalised real estate advice. Call, WhatsApp, or fill the form — I respond within 2 hours.',
+  description: 'Get in touch for personalised real estate advice. Chat on WhatsApp or fill the form — I respond within 2 hours.',
 }
 
-const contactMethods = [
-  {
-    icon: Phone,
-    label: 'Call or WhatsApp',
-    value: '+91 98765 43210',
-    href: 'tel:+919876543210',
-    desc: 'Mon – Sat, 9am – 8pm',
-  },
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'arjun@prestigeproperties.in',
-    href: 'mailto:arjun@prestigeproperties.in',
-    desc: 'Typically reply within 2 hours',
-  },
-  {
-    icon: MapPin,
-    label: 'Office',
-    value: '12/A, Lavelle Road, Bangalore — 560 001',
-    href: 'https://maps.google.com/?q=12.97,77.60',
-    desc: 'By appointment only',
-  },
-  {
-    icon: Clock,
-    label: 'Office Hours',
-    value: 'Mon – Sat: 9am to 8pm',
-    href: null,
-    desc: 'Sunday by appointment',
-  },
-]
+const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'
+const waMsg = encodeURIComponent("Hi! I'd like to discuss a property. Are you available?")
 
 export default function ContactPage() {
-  const whatsappMsg = encodeURIComponent("Hi Arjun! I'd like to discuss a property. Are you available?")
-
   return (
     <div className="pt-20 lg:pt-24">
       {/* Header */}
@@ -60,52 +30,39 @@ export default function ContactPage() {
 
       <div className="section-padding py-12">
         <div className="container-max grid lg:grid-cols-5 gap-12">
-          {/* Contact methods */}
-          <div className="lg:col-span-2 space-y-6">
-            {contactMethods.map(m => (
-              <div key={m.label} className="flex gap-4">
-                <div className="w-11 h-11 rounded-2xl bg-gold-500/10 flex items-center justify-center shrink-0">
-                  <m.icon className="w-5 h-5 text-gold-500" />
-                </div>
-                <div>
-                  <p className="text-xs font-medium text-gray-500 dark:text-navy-300 uppercase tracking-wider mb-0.5">{m.label}</p>
-                  {m.href ? (
-                    <a href={m.href} target={m.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="font-semibold text-navy dark:text-cream hover:text-gold-500 dark:hover:text-gold-400 transition-colors text-sm">
-                      {m.value}
-                    </a>
-                  ) : (
-                    <p className="font-semibold text-navy dark:text-cream text-sm">{m.value}</p>
-                  )}
-                  <p className="text-xs text-gray-400 dark:text-navy-300 mt-0.5">{m.desc}</p>
-                </div>
-              </div>
-            ))}
+          {/* Left — WhatsApp CTA */}
+          <div className="lg:col-span-2 flex flex-col gap-6">
+            <div>
+              <h2 className="font-serif text-xl font-semibold text-navy dark:text-cream mb-2">
+                Prefer instant replies?
+              </h2>
+              <p className="text-sm text-gray-500 dark:text-navy-200 leading-relaxed">
+                WhatsApp is the fastest way to reach me. I typically reply within minutes during working hours.
+              </p>
+            </div>
 
-            {/* WhatsApp CTA */}
             <a
-              href={`https://wa.me/919876543210?text=${whatsappMsg}`}
+              href={`https://wa.me/${waNumber}?text=${waMsg}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-4 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors group"
+              className="flex items-center gap-4 p-5 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors group"
             >
-              <MessageCircle className="w-6 h-6 text-[#25D366]" />
+              <div className="w-12 h-12 rounded-2xl bg-[#25D366] flex items-center justify-center shrink-0">
+                <MessageCircle className="w-6 h-6 text-white" />
+              </div>
               <div>
-                <p className="font-semibold text-navy dark:text-cream text-sm group-hover:text-[#20BD5C] transition-colors">Chat on WhatsApp</p>
-                <p className="text-xs text-gray-500 dark:text-navy-200">Usually replies within minutes</p>
+                <p className="font-semibold text-navy dark:text-cream group-hover:text-[#20BD5C] transition-colors">
+                  Chat on WhatsApp
+                </p>
+                <p className="text-xs text-gray-500 dark:text-navy-200 mt-0.5">Usually replies within minutes</p>
               </div>
             </a>
 
-            {/* Embedded map */}
-            <div className="rounded-2xl overflow-hidden aspect-video border border-cream-300 dark:border-navy-600">
-              <iframe
-                title="Office location"
-                src="https://maps.google.com/maps?q=12.97,77.60&z=15&output=embed"
-                width="100%"
-                height="100%"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="border-0 w-full h-full"
-              />
+            <div className="p-5 rounded-2xl bg-cream-50 dark:bg-navy-800 border border-cream-200 dark:border-navy-700">
+              <p className="text-sm font-semibold text-navy dark:text-cream mb-1">Or fill the form</p>
+              <p className="text-xs text-gray-500 dark:text-navy-200 leading-relaxed">
+                Leave your details and I&apos;ll reach out to you within 2 hours with personalised recommendations.
+              </p>
             </div>
           </div>
 

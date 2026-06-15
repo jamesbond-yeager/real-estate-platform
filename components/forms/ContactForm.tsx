@@ -61,7 +61,8 @@ export default function ContactForm() {
         <h3 className="font-serif text-2xl font-bold text-navy dark:text-cream">Message Received!</h3>
         <p className="text-gray-600 dark:text-navy-200 max-w-sm">
           Thank you for reaching out. I typically respond within 2 hours during business hours.
-          For urgent queries: <a href="tel:+919876543210" className="text-gold-500 font-semibold">+91 98765 43210</a>
+          For urgent queries:{' '}
+          <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'}`} target="_blank" rel="noopener noreferrer" className="text-gold-500 font-semibold">Chat on WhatsApp</a>
         </p>
       </div>
     )

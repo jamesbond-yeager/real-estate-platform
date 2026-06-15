@@ -56,8 +56,8 @@ export default function EnquiryForm({ listingId, listingTitle, listingLocation }
         <CheckCircle2 className="w-12 h-12 text-emerald-500" />
         <p className="font-serif font-semibold text-navy dark:text-cream text-xl">Enquiry Sent!</p>
         <p className="text-gray-600 dark:text-navy-200 text-sm">
-          I&apos;ll reach out to you within 2 hours. For urgent queries, call{' '}
-          <a href="tel:+919876543210" className="text-gold-500 font-medium">+91 98765 43210</a>.
+          I&apos;ll reach out to you within 2 hours. For urgent queries,{' '}
+          <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'}`} target="_blank" rel="noopener noreferrer" className="text-gold-500 font-medium">chat on WhatsApp</a>.
         </p>
       </div>
     )

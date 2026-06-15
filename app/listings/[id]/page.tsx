@@ -11,7 +11,7 @@ import { categoryLabel, typeLabel, getStatusColor, getStatusLabel } from '@/lib/
 import ShareButton from '@/components/ui/ShareButton'
 import {
   Bed, Bath, Maximize, MapPin, Calendar, Car, Layers, ArrowLeft,
-  CheckCircle2, Phone
+  CheckCircle2
 } from 'lucide-react'
 
 const ALL_LISTINGS = listingsData as Listing[]
@@ -222,12 +222,6 @@ export default async function ListingDetailPage({ params }: { params: Promise<{ 
                   {/* Direct contact card */}
                   <div className="card-base p-5 flex flex-col gap-3">
                     <p className="font-semibold text-navy dark:text-cream text-sm">Prefer to contact directly?</p>
-                    <a
-                      href={`tel:+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'}`}
-                      className="btn-navy w-full text-sm"
-                    >
-                      <Phone className="w-4 h-4" /> Call Now
-                    </a>
                     <a
                       href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'}?text=${encodeURIComponent(`Hi, I'm interested in ${listing.title} located in ${listing.location}. Please share more details.`)}`}
                       target="_blank"

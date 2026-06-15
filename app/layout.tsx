@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description:
     'Find your dream home with Bangalore\'s trusted real estate expert. Residential, commercial, luxury villas, land, and PG accommodations. Call today for a free consultation.',
   keywords: ['real estate bangalore', 'property for sale bangalore', 'luxury villas', 'apartments', 'commercial property', 'land plots', 'PG accommodation'],
-  authors: [{ name: 'Arjun Sharma' }],
-  creator: 'Arjun Sharma',
+  authors: [{ name: 'Prestige Properties' }],
+  creator: 'Prestige Properties',
   openGraph: {
     type: 'website',
     locale: 'en_IN',
