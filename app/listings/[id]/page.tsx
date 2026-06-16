@@ -125,6 +125,10 @@ export default async function ListingDetailPage({ params }: { params: Promise<{ 
                       <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${getStatusColor(listing.status)}`}>
                         {getStatusLabel(listing.status)}
                       </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400">
+                        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        Verified Listing
+                      </span>
                     </div>
                     <div className="flex gap-2">
                       <ShareButton title={listing.title} />

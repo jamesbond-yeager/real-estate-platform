@@ -1,5 +1,5 @@
 'use client'
-import { SlidersHorizontal, X } from 'lucide-react'
+import { SlidersHorizontal, X, MapPin } from 'lucide-react'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -97,6 +97,27 @@ export default function ListingFilters({ filters, onChange }: Props) {
           ))}
         </div>
 
+        {/* Location search — always visible */}
+        <div className="relative flex-1 min-w-[180px] max-w-xs">
+          <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gold-500 pointer-events-none" />
+          <input
+            type="text"
+            value={filters.location}
+            onChange={e => set('location', e.target.value)}
+            placeholder="Search by location…"
+            className="input-base text-sm pl-8 pr-8 py-2.5 w-full"
+          />
+          {filters.location && (
+            <button
+              onClick={() => set('location', '')}
+              aria-label="Clear location"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-cream"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          )}
+        </div>
+
         {/* Advanced filters toggle */}
         <button
           onClick={() => setOpen(!open)}
@@ -132,24 +153,13 @@ export default function ListingFilters({ filters, onChange }: Props) {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="mt-4 p-5 bg-white dark:bg-navy-800 rounded-2xl border border-cream-300 dark:border-navy-600 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="mt-4 p-5 bg-white dark:bg-navy-800 rounded-2xl border border-cream-300 dark:border-navy-600 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {/* Category */}
               <div>
                 <label className="label-base">Category</label>
                 <select value={filters.category} onChange={e => set('category', e.target.value)} className="input-base text-sm">
                   {categories.map(c => <option key={c.value} value={c.value}>{c.label}</option>)}
                 </select>
-              </div>
-
-              {/* Location */}
-              <div>
-                <label className="label-base">Location</label>
-                <input
-                  value={filters.location}
-                  onChange={e => set('location', e.target.value)}
-                  placeholder="e.g. Koramangala"
-                  className="input-base text-sm"
-                />
               </div>
 
               {/* Min bedrooms */}

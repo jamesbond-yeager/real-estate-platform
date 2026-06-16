@@ -49,13 +49,17 @@ export default function ListingCard({ listing, index = 0 }: Props) {
         />
 
         {/* Overlay badges */}
-        <div className="absolute top-3 left-3 flex gap-2 flex-wrap">
+        <div className="absolute top-3 left-3 flex gap-1.5 flex-wrap">
           <Badge variant="navy" className="text-[10px] px-2 py-0.5 bg-navy/80 text-white backdrop-blur-sm">
             {typeLabel(listing.type)}
           </Badge>
           {listing.featured && (
             <Badge variant="gold" className="text-[10px] px-2 py-0.5">Featured</Badge>
           )}
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/90 text-white backdrop-blur-sm">
+            <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Verified
+          </span>
         </div>
 
         {/* Status */}

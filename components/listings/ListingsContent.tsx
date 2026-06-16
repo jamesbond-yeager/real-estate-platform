@@ -63,17 +63,36 @@ export default function ListingsContent() {
             <div className="w-16 h-16 rounded-full bg-cream-200 dark:bg-navy-700 flex items-center justify-center mb-4">
               <Search className="w-7 h-7 text-gray-400" />
             </div>
-            <h3 className="font-serif text-xl font-semibold text-navy dark:text-cream mb-2">No properties found</h3>
-            <p className="text-gray-500 dark:text-navy-200 text-sm max-w-xs">
-              Try adjusting your filters or{' '}
-              <button
-                onClick={() => setFilters({ type: '', category: '', location: '', minPrice: 0, maxPrice: 200000000, minBeds: 0, sort: 'featured' })}
-                className="text-gold-500 underline"
-              >
-                clear them all
-              </button>
-              .
-            </p>
+            {filters.location ? (
+              <>
+                <h3 className="font-serif text-xl font-semibold text-navy dark:text-cream mb-2">
+                  No verified listings in &ldquo;{filters.location}&rdquo; yet
+                </h3>
+                <p className="text-gray-500 dark:text-navy-200 text-sm max-w-sm">
+                  Check back soon — we add new personally verified properties regularly.{' '}
+                  <button
+                    onClick={() => setFilters({ type: '', category: '', location: '', minPrice: 0, maxPrice: 200000000, minBeds: 0, sort: 'featured' })}
+                    className="text-gold-500 underline"
+                  >
+                    View all listings
+                  </button>
+                </p>
+              </>
+            ) : (
+              <>
+                <h3 className="font-serif text-xl font-semibold text-navy dark:text-cream mb-2">No properties found</h3>
+                <p className="text-gray-500 dark:text-navy-200 text-sm max-w-xs">
+                  Try adjusting your filters or{' '}
+                  <button
+                    onClick={() => setFilters({ type: '', category: '', location: '', minPrice: 0, maxPrice: 200000000, minBeds: 0, sort: 'featured' })}
+                    className="text-gold-500 underline"
+                  >
+                    clear them all
+                  </button>
+                  .
+                </p>
+              </>
+            )}
           </div>
         ) : (
           <>
