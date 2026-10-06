@@ -165,7 +165,7 @@ Vercel is Next.js's native host and offers a generous free tier.
 4. In the **Environment Variables** section, add:
    ```
    WEB3FORMS_ACCESS_KEY = your_key_here
-   NEXT_PUBLIC_WHATSAPP_NUMBER = 919876543210
+   NEXT_PUBLIC_WHATSAPP_NUMBER = 91XXXXXXXXXX
    NEXT_PUBLIC_SITE_URL = https://your-project.vercel.app
    ```
 
@@ -209,7 +209,6 @@ Every time you push to `main`, Vercel automatically redeploys.
 ### Change agent name / contact details
 
 - **Name**: Search & replace `Arjun Sharma` across all files
-- **Phone**: Replace `+91 98765 43210` and `919876543210`
 - **Email**: Replace `arjun@prestigeproperties.in`
 - **Address**: Update in `Footer.tsx` and `contact/page.tsx`
 - **WhatsApp**: Set `NEXT_PUBLIC_WHATSAPP_NUMBER` in `.env.local`
