@@ -60,7 +60,7 @@ real-estate-platform/
 │   ├── home/                   # Hero, SearchBar, FeaturedListings, etc.
 │   ├── listings/               # ListingCard, ListingFilters, PropertyGallery
 │   ├── forms/                  # ContactForm, EnquiryForm, CallbackWidget, NotifySignup
-│   └── ui/                     # Button, Badge, ThemeToggle, WhatsAppButton, EMICalculator
+│   └── ui/                     # Button, Badge, ThemeToggle, EMICalculator
 ├── data/
 │   └── listings.json           # ← EDIT THIS to add/update properties
 ├── types/
@@ -165,7 +165,6 @@ Vercel is Next.js's native host and offers a generous free tier.
 4. In the **Environment Variables** section, add:
    ```
    WEB3FORMS_ACCESS_KEY = your_key_here
-   NEXT_PUBLIC_WHATSAPP_NUMBER = 91XXXXXXXXXX
    NEXT_PUBLIC_SITE_URL = https://your-project.vercel.app
    ```
 
@@ -211,7 +210,6 @@ Every time you push to `main`, Vercel automatically redeploys.
 - **Name**: Search & replace `Arjun Sharma` across all files
 - **Email**: Replace `arjun@prestigeproperties.in`
 - **Address**: Update in `Footer.tsx` and `contact/page.tsx`
-- **WhatsApp**: Set `NEXT_PUBLIC_WHATSAPP_NUMBER` in `.env.local`
 
 ### Change site name
 

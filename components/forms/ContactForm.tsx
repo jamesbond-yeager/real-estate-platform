@@ -50,7 +50,7 @@ export default function ContactForm() {
       })
       setDone(true)
     } catch {
-      setSubmitError('Could not send your message. Please check your connection and try again, or call us directly.')
+      setSubmitError('Could not send your message. Please check your connection and try again.')
     }
   }
 
@@ -60,9 +60,7 @@ export default function ContactForm() {
         <CheckCircle2 className="w-16 h-16 text-emerald-500" />
         <h3 className="font-serif text-2xl font-bold text-navy dark:text-cream">Message Received!</h3>
         <p className="text-gray-600 dark:text-navy-200 max-w-sm">
-          Thank you for reaching out. I typically respond within 2 hours during business hours.
-          For urgent queries:{' '}
-          <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '910000000000'}`} target="_blank" rel="noopener noreferrer" className="text-gold-500 font-semibold">Chat on WhatsApp</a>
+          Thanks, we&apos;ll get back to you shortly.
         </p>
       </div>
     )

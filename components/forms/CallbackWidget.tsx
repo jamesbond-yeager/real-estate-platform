@@ -33,12 +33,12 @@ export default function CallbackWidget() {
       })
       setDone(true)
     } catch {
-      setSubmitError('Failed to send. Please try calling directly.')
+      setSubmitError('Failed to send. Please try again.')
     }
   }
 
   return (
-    <div className="fixed bottom-24 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50">
       <AnimatePresence>
         {open && (
           <motion.div
@@ -68,7 +68,7 @@ export default function CallbackWidget() {
                 <div className="flex flex-col items-center gap-2 py-4 text-center">
                   <CheckCircle2 className="w-10 h-10 text-emerald-500" />
                   <p className="font-semibold text-navy dark:text-cream text-sm">Callback requested!</p>
-                  <p className="text-xs text-gray-500 dark:text-navy-200">I&apos;ll call you back within 30 minutes.</p>
+                  <p className="text-xs text-gray-500 dark:text-navy-200">Thanks, we&apos;ll get back to you shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
